@@ -46,18 +46,42 @@ conda install jupyter
 #### Step 6: Install VSCode Jupyter Extension
 Open VS Code and navigate to the Extensions panel (MacOS - Cmd+Shift+X).<br>```Search for "Jupyter"``` and install the official Microsoft Jupyter extension. This enables you to create, edit, and run Jupyter notebooks directly within VS Code, eliminating the need to launch a separate browser instance.
 
-#### Step 6: Start a new notebook 
+#### Step 7: Start a new notebook 
 1. In VS Code, create a new file with the ```.ipynb``` extension (e.g., python_basics.ipynb)
 2. VS Code will automatically recognize it as a Jupyter notebook and open it in notebook mode
 3. The notebook interface will appear with an empty cell, ready for your code or markdown input <br>
 
 Note: You can also use the Command Palette (MacOS - Cmd+Shift+X) and search for "Create New Jupyter Notebook" as an alternative method.
 
-#### Step 7: Check your environemnt
+##### Alternative Method: 
+You can run Jupyter Notebooks directly in your web browser. Here's how:
+1. Open your terminal
+2. Activate your Conda environment:
+```conda activate dipcc```
+3. Launch Jupyter Notebook:
+```jupyter notebook```
+
+This will automatically open your default web browser with the Jupyter Notebook interface. From here, you can either:
+- Create new notebooks
+- Open and edit existing notebooks
+- Navigate through your project files
+
+Note: The server runs locally on your machine, typically at http://localhost:8888.
+
+#### Step 8: Set your Notebook Kernal (VSCode)
+
+You can open the kernel picker by clicking on "Select Kernel" in the upper right-hand corner of your notebook or through the Command Palette with the "Notebook: Select Notebook Kernel" command.
+- Make sure ```dipcc``` is selected as the kernel. If not, set it to ```dipcc```.
+- Double check this selection after opening any notebook, as it may reset.
+
+
+#### Step 9: Check your environment
+
+Once you have you a new notebook open. We can check if the notebook is using the right kernal by running the following command 
 
 ```
 import os
 print(os.environ['CONDA_DEFAULT_ENV'])
 ```
 
-That cell above should output the text "dipcc" as this the name of the envrionment we created above.
+That cell above should output the text "dipcc" as this the name of the environment we created above.
