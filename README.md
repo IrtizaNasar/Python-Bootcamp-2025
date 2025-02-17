@@ -85,3 +85,14 @@ print(os.environ['CONDA_DEFAULT_ENV'])
 ```
 
 That cell above should output the text "dipcc" as this the name of the environment we created above.
+
+## FAQ's
+
+### What is Conda?
+Conda is a free, open-source package manager and environment management system. It allows users to install, update, and remove packages, and create isolated environments for different projects.
+
+### What is a Jupyter Notebook?
+A Jupyter Notebook is a free, open-source web application that lets users create and share documents that contain code, text, and other rich media
+
+### Why have different environments?
+Different environments allow you to isolate project dependencies, preventing conflicts between packages and versions. This ensures each project has exactly what it needs without interfering with others, making projects more reliable and reproducible.
