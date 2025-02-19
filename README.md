@@ -13,7 +13,7 @@ Three core areas of foucs:
 You will need to have [VS Code](https://code.visualstudio.com/download) Installed for these sessions. 
 <br></br>
 #### Step 01: Install Conda <br>
-Download and install [Anacoda](https://www.anaconda.com/download/success)
+Download and install [Anaconda](https://www.anaconda.com/download/success)
 <br>
 
 #### Step 02: Open the Terminal
