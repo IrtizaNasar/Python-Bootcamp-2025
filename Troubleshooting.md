@@ -67,3 +67,31 @@ Follow the steps in General Troubleshooting
 ## `NameError`
 
 Most likely you've typed the name of whatever variable or function you're trying to use wrong, double check for typos.
+
+# Numpy install errors
+
+## `install package error`
+
+1. In order to resolve this you need to uninstall packages and re-install them.
+2. Place this cell before your import cell
+```
+# uninstall and re-install libraries
+
+!{sys.executable} -m pip uninstall setuptools seaborn numpy pandas matplotlib -y
+!{sys.executable} -m pip install setuptools seaborn numpy pandas matplotlib
+```
+Your import cell should appear and be run afterwards. It looks like this:
+```
+# imports
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt 
+import keplergl as kpg 
+import plotly.express as px
+```
+3. Restart the kernal - push ```restart``` button next to ```run all``` button in VS Code. This step is important otherwise none of this will update and work. 
+4.  ```run all``` cells again.
+5.  This should now run the import cell without any errors. 
+
