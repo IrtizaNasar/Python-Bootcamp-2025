@@ -68,6 +68,18 @@ Follow the steps in General Troubleshooting
 
 Most likely you've typed the name of whatever variable or function you're trying to use wrong, double check for typos.
 
+## `ParserError: Error tokenizing data`
+
+This could be because the delimiters in the dataset are not as expected, i.e. semicolons instead of commons in a .csv. In this case, you can use the following code block to change `sep=` to the right character.
+
+```
+df = pd.read_csv('LINK TO FILE', 
+                 sep=';',
+                 parse_dates=['Date'],
+                 dayfirst=True  # Since dates are in DD/MM/YY format
+)
+```
+
 # Numpy install errors
 
 ## `install package error`
@@ -95,3 +107,9 @@ import plotly.express as px
 4.  ```run all``` cells again.
 5.  This should now run the import cell without any errors. 
 
+# Errors showing map with `keplergl` on Windows
+
+On Windows, Kepler might not show a map or produce an error about processing html and finding `<bytes>`. You can export your Kepler map as a standalone webpage in this case and view it in your browser.
+
+1. Add a code block with `map1.save_to_html(file_name='index.html')` and run
+2. Find `index.html` and double click to open, or start a live server in the folder `index.html` is in.
